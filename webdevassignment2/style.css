@@ -1,0 +1,284 @@
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 16px;
+    background-color: #252525;
+    font-family: 'Poppins', sans-serif;
+    color: #222;
+    font-size: 12px;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    background-color: #f4f4f4;
+    z-index: -1;
+}
+
+nav {
+    background-color: #064db1;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+
+nav h1 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 2px 0;
+    font-size: 10px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #ffdc73;
+}
+
+section {
+    text-align: center;
+    padding: 14px 10px;
+    scroll-margin-top: 15px;
+}
+
+section h2 {
+    font-size: 15px;
+    margin: 0 0 12px;
+    font-weight: 600;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #bcbcbc;
+    margin: 0;
+}
+
+#about {
+    padding-top: 0;
+    padding-bottom: 14px;
+}
+
+#about h2 {
+    margin-top: 0;
+}
+
+.profile-img {
+    display: block;
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    margin: 0 auto 8px;
+    border-radius: 50%;
+    background-color: #cfe2ff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+#about p {
+    font-size: 9px;
+    margin: 8px 0 0;
+}
+
+#skills table {
+    width: 50%;
+    max-width: 450px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    font-size: 10px;
+}
+
+#skills th {
+    background-color: #064db1;
+    color: white;
+    padding: 7px;
+    border: 1px solid #064db1;
+}
+
+#skills td {
+    border: 1px solid #064db1;
+    padding: 6px;
+}
+
+#skills tbody tr:nth-child(even) {
+    background-color: #e6efff;
+}
+
+#skills tbody tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+#projects {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.project-card {
+    background-color: white;
+    width: 52%;
+    max-width: 470px;
+    margin: 8px auto;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3 {
+    font-size: 11px;
+    margin: 0 0 8px;
+}
+
+.project-card p {
+    font-size: 9px;
+    margin: 0;
+}
+
+#contact {
+    padding-top: 24px;
+    padding-bottom: 16px;
+}
+
+#contact h2 {
+    margin-bottom: 12px;
+}
+
+.contact-table {
+    width: 50%;
+    max-width: 450px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    font-size: 10px;
+}
+
+.contact-table td {
+    border: 1px solid #064db1;
+    padding: 4px 8px;
+}
+
+.contact-table td:first-child {
+    width: 30%;
+}
+
+.contact-table input,
+.contact-table textarea {
+    width: 100%;
+    padding: 5px;
+    font-family: inherit;
+    font-size: 9px;
+    border: 1px solid #999;
+}
+
+.contact-table textarea {
+    resize: vertical;
+    min-height: 30px;
+}
+
+.contact-table input:focus,
+.contact-table textarea:focus {
+    outline: 1px solid #064db1;
+}
+
+.submit-cell {
+    text-align: center;
+}
+
+button {
+    background-color: #064db1;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 6px 25px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 9px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #003477;
+}
+
+.back-to-top {
+    position: fixed;
+    right: 27px;
+    bottom: 20px;
+    background-color: #064db1;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 9px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.back-to-top:hover {
+    background-color: #003477;
+}
+
+footer {
+    background-color: #064db1;
+    height: 5px;
+    color: white;
+    text-align: center;
+}
+
+footer p {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 8px;
+    }
+
+    body::before {
+        top: 8px;
+        left: 8px;
+        right: 8px;
+        bottom: 8px;
+    }
+
+    .profile-img {
+        width: 170px;
+        height: 170px;
+    }
+
+    #skills table,
+    .project-card,
+    .contact-table {
+        width: 90%;
+    }
+
+    .back-to-top {
+        right: 12px;
+        bottom: 12px;
+    }
+}
